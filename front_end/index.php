@@ -158,21 +158,7 @@
                         </div>
                     </div>';
 
-            }
-			/*echo '<table>
-			<tr>
-			<th>Titulo</th>
-			<th>Ranking</th>
-			<th>reviews</th>
-			</tr>';
-			foreach($result as $row) {
-			    echo "<tr>";
-			    echo "<td>" . $row['titulo'] . "</td>";
-			    echo "<td>" . $row['ranking'] . "</td>";
-			    echo "<td>" . $row['reviews'] . "</td>";
-			    echo "</tr>";
-			}
-			echo "</table>";*/
+            
 		?>
                     <div class="col-sm-4 col-lg-4 col-md-4">
                         <div class="thumbnail">
