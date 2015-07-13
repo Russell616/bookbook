@@ -12,10 +12,11 @@
     <title>Shop Homepage - Start Bootstrap Template</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
 
     <!-- Custom CSS -->
-    <link href="css/shop-homepage.css" rel="stylesheet">
+    <link href="css/shop-homepage.css" rel="stylesheet" type="text/css">
+    
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -108,7 +109,71 @@
                 </div>
 
                 <div class="row">
+		<?php
+			//DEBUG
+			ini_set('display_errors',1);
+			ini_set('display_startup_errors',1);
+			error_reporting(-1);
 
+			$host="localhost"; // o MySQL esta disponivel nesta maquina
+			$user="root"; // -> substituir pelo nome de utilizador
+			$password="root"; // -> substituir pela password dada pelo mysql_reset
+			$dbname = "website"; // a BD tem nome identico ao utilizador
+			
+
+			$connection = new PDO("mysql:host=" . $host. ";dbname=" . $dbname, $user, $password, array(PDO::ATTR_EMULATE_PREPARES => false,
+                     PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+
+			if (!$connection) {
+			    die('Could not connect: ' . mysqli_error($con));
+			}
+
+			$sql="SELECT * FROM caixas";
+			$result = $connection->query($sql);
+			
+            foreach($result as $row) {
+                  echo '<div class="col-sm-4 col-lg-4 col-md-4">
+                  <div class="thumbnail">
+                  <img src="http://placehold.it/320x150" alt="">
+                  <div class="caption">';
+                  
+                  echo '<h4><a href="#">'. $row['titulo'] .'</a></h4>';
+                  echo '<p>Mini descricao do texto aqui...</p>'; //FIXME: APENAS TEMPORARIO!! ALTERAR PELA DESCRICAO REAL
+                  echo '</div>';
+                  
+                  $star_max = 5; //numero maximo de estrelas possiveis
+                  $num_empty_stars = $star_max - intval($row['ranking']);
+                  
+                  echo   '<div class="ratings">
+                            <p class="pull-right">' . $row['reviews'] . ' reviews</p>';
+                  echo '<p>';
+                  for($i = intval($row['ranking']); $i > 0; $i -= 1) {
+                      echo '<span class="glyphicon glyphicon-star"></span>';
+                  }
+                  for($i = $num_empty_stars; $i > 0; $i -= 1) {
+                      echo '<span class="glyphicon glyphicon-star-empty"></span>';
+                  }
+                  echo '  </p>
+                            </div>
+                        </div>
+                    </div>';
+
+            }
+			/*echo '<table>
+			<tr>
+			<th>Titulo</th>
+			<th>Ranking</th>
+			<th>reviews</th>
+			</tr>';
+			foreach($result as $row) {
+			    echo "<tr>";
+			    echo "<td>" . $row['titulo'] . "</td>";
+			    echo "<td>" . $row['ranking'] . "</td>";
+			    echo "<td>" . $row['reviews'] . "</td>";
+			    echo "</tr>";
+			}
+			echo "</table>";*/
+		?>
                     <div class="col-sm-4 col-lg-4 col-md-4">
                         <div class="thumbnail">
                             <img src="http://placehold.it/320x150" alt="">
