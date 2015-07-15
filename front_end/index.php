@@ -141,15 +141,15 @@
 			}
 			$countchar = 0;
 			$MAX_CHAR = 140;
-			echo '<p>'
+			echo '<p>';
 			while (false !== ($char = fgetc($fp)) and $countchar<$MAX_CHAR ) {
 			    echo "$char";
 			    $countchar++;
 			}
 			if($MAX_CHAR == $countchar)
 				echo '...';
-                  	echo '</p>'
-                  echo '</div>';
+            echo '</p>';
+            echo '</div>';
                   
                   $star_num = intval($row['ranking']);
                   if($star_num > 5)
