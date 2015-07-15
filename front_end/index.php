@@ -66,10 +66,26 @@
             <div class="col-md-3">
                 <p class="lead">Shop Name</p>
                 <div class="list-group">
-                    <a href="#" class="list-group-item">Aventura</a> <!--TODO: METER LINK VÁLIDO -->
-                    <a href="#" class="list-group-item">Drama</a> <!--TODO: METER LINK VÁLIDO -->
-                    <a href="#" class="list-group-item">Policial</a> <!--TODO: METER LINK VÁLIDO -->
-                    <a href="#" class="list-group-item">OUTRAS TAGS A INSERIR</a> <!--TODO: METER LINK VÁLIDO -->
+                    <?php
+        			$host="localhost"; // o MySQL esta disponivel nesta maquina
+        			$user="root"; // -> substituir pelo nome de utilizador
+        			$password="root"; // -> substituir pela password dada pelo mysql_reset
+        			$dbname = "website"; // a BD tem nome identico ao utilizador
+        			
+        
+        			$connection = new PDO("mysql:host=" . $host. ";dbname=" . $dbname, $user, $password, array(PDO::ATTR_EMULATE_PREPARES => false,
+                             PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+        
+        			if (!$connection) {
+        			    die('Could not connect: ' . mysqli_error($con));
+        			}
+        
+        			$sql="SELECT nome FROM tags";
+        			$result = $connection->query($sql);
+                    foreach($result as $row) {
+                        echo '<a href="#" class="list-group-item">' . $row['nome'] . ' </a>'; //TODO: METER LINK VÁLIDO
+                    }
+                    ?>
                 </div>
             </div>
 
