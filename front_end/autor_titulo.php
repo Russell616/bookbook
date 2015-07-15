@@ -9,7 +9,8 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Shop Item - Start Bootstrap Template</title>
+    <title>Book Book</title>
+
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -46,9 +47,6 @@
                 <ul class="nav navbar-nav">
                     <li>
                         <a href="#">About</a>
-                    </li>
-                    <li>
-                        <a href="#">Services</a>
                     </li>
                     <li>
                         <a href="#">Contact</a>
