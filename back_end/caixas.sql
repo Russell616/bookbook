@@ -1,5 +1,5 @@
 -- --------------------------------------------------------
--- Host:                         127.0.0.1
+-- Host:                         81.193.186.14
 -- Server version:               5.6.24-log - MySQL Community Server (GPL)
 -- Server OS:                    Win64
 -- HeidiSQL Version:             9.2.0.4947
@@ -18,8 +18,10 @@ USE `website`;
 -- Dumping structure for table website.caixas
 CREATE TABLE IF NOT EXISTS `caixas` (
   `titulo` text NOT NULL,
+  `autor` text NOT NULL,
   `ranking` float NOT NULL,
-  `reviews` int(11) NOT NULL
+  `reviews` int(11) NOT NULL,
+  PRIMARY KEY (`titulo`(100),`autor`(100))
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- Data exporting was unselected.
