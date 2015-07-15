@@ -135,7 +135,20 @@
                   <div class="caption">';
                   
                   echo '<h4><a href="#">'. $row['titulo'] .'</a></h4>';
-                  echo '<p>Mini descricao do texto aqui...</p>'; //FIXME: APENAS TEMPORARIO!! ALTERAR PELA DESCRICAO REAL
+		$fp = fopen($row['titulo'] . '_desc.txt', 'r');
+			if (!$fp) {
+   			 echo '<p>DEBUG: vazio...</p>'; //FIXME: APENAS TEMPORARIO!!
+			}
+			$countchar = 0;
+			$MAX_CHAR = 140;
+			echo '<p>'
+			while (false !== ($char = fgetc($fp)) and $countchar<$MAX_CHAR ) {
+			    echo "$char";
+			    $countchar++;
+			}
+			if($MAX_CHAR == $countchar)
+				echo '...';
+                  	echo '</p>'
                   echo '</div>';
                   
                   $star_max = 5; //numero maximo de estrelas possiveis
