@@ -40,19 +40,16 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">Start Bootstrap</a>
+                <a class="navbar-brand" href="#">Book Book</a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li>
-                        <a href="#">About</a>
+                        <a href="#">About</a> <!--TODO: METER LINK VÁLIDO -->
                     </li>
                     <li>
-                        <a href="#">Services</a>
-                    </li>
-                    <li>
-                        <a href="#">Contact</a>
+                        <a href="#">Contact</a> <!--TODO: METER LINK VÁLIDO -->
                     </li>
                 </ul>
             </div>
@@ -69,9 +66,10 @@
             <div class="col-md-3">
                 <p class="lead">Shop Name</p>
                 <div class="list-group">
-                    <a href="#" class="list-group-item">Category 1</a>
-                    <a href="#" class="list-group-item">Category 2</a>
-                    <a href="#" class="list-group-item">Category 3</a>
+                    <a href="#" class="list-group-item">Aventura</a> <!--TODO: METER LINK VÁLIDO -->
+                    <a href="#" class="list-group-item">Drama</a> <!--TODO: METER LINK VÁLIDO -->
+                    <a href="#" class="list-group-item">Policial</a> <!--TODO: METER LINK VÁLIDO -->
+                    <a href="#" class="list-group-item">OUTRAS TAGS A INSERIR</a> <!--TODO: METER LINK VÁLIDO -->
                 </div>
             </div>
 
