@@ -68,9 +68,26 @@
             <div class="col-md-3">
                 <p class="lead">Shop Name</p>
                 <div class="list-group">
-                    <a href="#" class="list-group-item active">Category 1</a>
-                    <a href="#" class="list-group-item">Category 2</a>
-                    <a href="#" class="list-group-item">Category 3</a>
+                    <?php
+        			$host="localhost"; // o MySQL esta disponivel nesta maquina
+        			$user="root"; // -> substituir pelo nome de utilizador
+        			$password="root"; // -> substituir pela password dada pelo mysql_reset
+        			$dbname = "website"; // a BD tem nome identico ao utilizador
+        			
+        
+        			$connection = new PDO("mysql:host=" . $host. ";dbname=" . $dbname, $user, $password, array(PDO::ATTR_EMULATE_PREPARES => false,
+                             PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+        
+        			if (!$connection) {
+        			    die('Could not connect: ' . mysqli_error($con));
+        			}
+        
+        			$sql="SELECT nome FROM tags";
+        			$result = $connection->query($sql);
+                    foreach($result as $row) {
+                        echo '<a href="#" class="list-group-item">' . $row['nome'] . ' </a>'; //TODO: METER LINK VÁLIDO
+                    }
+                    ?>
                 </div>
             </div>
 
@@ -90,12 +107,44 @@
                     <div class="ratings">
                         <p class="pull-right">3 reviews</p>
                         <p>
-                            <span class="glyphicon glyphicon-star"></span>
-                            <span class="glyphicon glyphicon-star"></span>
-                            <span class="glyphicon glyphicon-star"></span>
-                            <span class="glyphicon glyphicon-star"></span>
-                            <span class="glyphicon glyphicon-star-empty"></span>
-                            4.0 stars
+                            <?php
+                                	$host="localhost"; // o MySQL esta disponivel nesta maquina
+                        			$user="root"; // -> substituir pelo nome de utilizador
+                        			$password="root"; // -> substituir pela password dada pelo mysql_reset
+                        			$dbname = "website"; // a BD tem nome identico ao utilizador
+                        			
+                        
+                        			$connection = new PDO("mysql:host=" . $host. ";dbname=" . $dbname, $user, $password, array(PDO::ATTR_EMULATE_PREPARES => false,
+                                             PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+                        
+                        			if (!$connection) {
+                        			    die('Could not connect: ' . mysqli_error($con));
+                        			}
+                                    //FIXME - SQL INJECTION!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+                                    //MUITO PERIGOSO!!!!!!!!!!!!!!!!!!!!!!!!!
+                                    //CORRIGIR ESTA MERDA!!!!!!!!!!!!!!!!!!!!!!!!!11
+                              
+                        		   $sql="SELECT ranking FROM caixas WHERE titulo = " . $_GET['t'] . " and autor = " . $_GET['a'] ;
+                        	       $result = $connection->query($sql);
+                                
+                                
+                                  $star_num = intval($result['ranking']);
+                                  if($star_num > 5)
+                                        $star_num = 5;
+                                  elseif ($star_num < 0)
+                                        $star_num = 0;
+                                        
+                                  $star_max = 5; //numero maximo de estrelas possiveis
+                                  $num_empty_stars = $star_max - $star_num;
+                                  
+                                  for($i = $star_num; $i > 0; $i -= 1) {
+                                      echo '<span class="glyphicon glyphicon-star"></span>';
+                                  }
+                                  for($i = $num_empty_stars; $i > 0; $i -= 1) {
+                                      echo '<span class="glyphicon glyphicon-star-empty"></span>';
+                                  }
+                                  echo floatval($result['ranking']) . 'stars';
+                             ?>
                         </p>
                     </div>
                 </div>
