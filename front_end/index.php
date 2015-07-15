@@ -124,7 +124,9 @@
 
                 <div class="row">
 		<?php
-			
+			function makeUrl($a, $t) {
+                return 'item.php/?a='.$a.'&t='.$t;
+            }
 
 			$host="localhost"; // o MySQL esta disponivel nesta maquina
 			$user="root"; // -> substituir pelo nome de utilizador
@@ -148,7 +150,7 @@
                   <img src="http://placehold.it/320x150" alt="">
                   <div class="caption">';
                   
-                  echo '<h4><a href="#">'. $row['titulo'] .'</a></h4>';
+                  echo '<h4><a href='. makeUrl($row['autor'],$row['titulo']) .  '>'. $row['titulo'] .'</a></h4>';
 		$fp = fopen($row['titulo'] . '_desc.txt', 'r');
 			if (!$fp) {
    			 echo '<p>DEBUG: vazio...</p>'; //FIXME: APENAS TEMPORARIO!!
