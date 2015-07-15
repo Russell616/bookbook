@@ -141,7 +141,7 @@
                   $star_num = intval($row['ranking']);
                   if($star_num > 5)
                         $star_num = 5;
-                  else if ($star_num < 0)
+                  elseif ($star_num < 0)
                         $star_num = 0;
                         
                   $star_max = 5; //numero maximo de estrelas possiveis
