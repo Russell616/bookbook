@@ -138,13 +138,19 @@
                   echo '<p>Mini descricao do texto aqui...</p>'; //FIXME: APENAS TEMPORARIO!! ALTERAR PELA DESCRICAO REAL
                   echo '</div>';
                   
+                  $star_num = intval($row['ranking']);
+                  if($star_num > 5)
+                        $star_num = 5;
+                  else if ($star_num < 0)
+                        $star_num = 0;
+                        
                   $star_max = 5; //numero maximo de estrelas possiveis
-                  $num_empty_stars = $star_max - intval($row['ranking']);
+                  $num_empty_stars = $star_max - $star_num;
                   
                   echo   '<div class="ratings">
                             <p class="pull-right">' . $row['reviews'] . ' reviews</p>';
                   echo '<p>';
-                  for($i = intval($row['ranking']); $i > 0; $i -= 1) {
+                  for($i = $star_num; $i > 0; $i -= 1) {
                       echo '<span class="glyphicon glyphicon-star"></span>';
                   }
                   for($i = $num_empty_stars; $i > 0; $i -= 1) {
