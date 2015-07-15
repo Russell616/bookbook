@@ -122,7 +122,14 @@
                                     //MUITO PERIGOSO!!!!!!!!!!!!!!!!!!!!!!!!!
                                     //CORRIGIR ESTA MERDA!!!!!!!!!!!!!!!!!!!!!!!!!11
                               
-                        		   $sql="SELECT ranking FROM caixas WHERE titulo = " . $_GET['t'] . " and autor = " . $_GET['a'] ;
+                              
+                              		Function test_input($data) {
+                        				$data = trim($data);
+                        				$data = stripslashes($data);
+                        				$data = htmlspecialchars($data);
+                        				return $data;
+                        			}
+                        		   $sql="SELECT ranking FROM caixas WHERE titulo = " . test_input($_GET['t']) . " and autor = " . test_input($_GET['a']) ;
                         	       $result = $connection->query($sql);
                                 
                                 
