@@ -11,12 +11,11 @@
 
     <title>Book Book</title>
 
-
     <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
 
     <!-- Custom CSS -->
-    <link href="css/shop-item.css" rel="stylesheet">
+    <link href="css/shop-homepage.css" rel="stylesheet" type="text/css">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -40,7 +39,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">Start Bootstrap</a>
+                <a class="navbar-brand" href="#">Book Book</a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -129,7 +128,7 @@
                         				$data = htmlspecialchars($data);
                         				return $data;
                         			}
-                        		   $sql="SELECT ranking FROM caixas WHERE titulo = " . test_input($_GET['t']) . " and autor = " . test_input($_GET['a']) ;
+                        		   $sql="SELECT ranking FROM caixas WHERE titulo = \"" . test_input($_GET['t']) . "\" and autor = \"" . test_input($_GET['a']) . "\"";
                         	       $result = $connection->query($sql);
                                 
                                 
@@ -148,7 +147,7 @@
                                   for($i = $num_empty_stars; $i > 0; $i -= 1) {
                                       echo '<span class="glyphicon glyphicon-star-empty"></span>';
                                   }
-                                  echo floatval($result['ranking']) . 'stars';
+                                  echo floatval($result['ranking']) . ' stars';
                              ?>
                         </p>
                     </div>
