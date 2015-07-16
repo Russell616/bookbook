@@ -132,7 +132,7 @@
                         	       $result = $connection->query($sql);
                                 
                                 
-                                  $star_num = intval($result['ranking']);
+                                  $star_num = intval($result);
                                   if($star_num > 5)
                                         $star_num = 5;
                                   elseif ($star_num < 0)
@@ -147,7 +147,7 @@
                                   for($i = $num_empty_stars; $i > 0; $i -= 1) {
                                       echo '<span class="glyphicon glyphicon-star-empty"></span>';
                                   }
-                                  echo floatval($result['ranking']) . ' stars';
+                                  echo floatval($result) . ' stars';
                              ?>
                         </p>
                     </div>
