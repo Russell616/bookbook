@@ -131,23 +131,25 @@
                         		   $sql="SELECT ranking FROM caixas WHERE titulo = \"" . test_input($_GET['t']) . "\" and autor = \"" . test_input($_GET['a']) . "\"";
                         	       $result = $connection->query($sql);
                                 
-                                  
-                                  $star_num = intval($result[0]['result']);
-                                  if($star_num > 5)
-                                        $star_num = 5;
-                                  elseif ($star_num < 0)
-                                        $star_num = 0;
-                                        
-                                  $star_max = 5; //numero maximo de estrelas possiveis
-                                  $num_empty_stars = $star_max - $star_num;
-                                  
-                                  for($i = $star_num; $i > 0; $i -= 1) {
-                                      echo '<span class="glyphicon glyphicon-star"></span>';
+                                  foreach($result as $row) {
+                                      $star_num = intval($row['result']);
+                                      if($star_num > 5)
+                                            $star_num = 5;
+                                      elseif ($star_num < 0)
+                                            $star_num = 0;
+                                            
+                                      $star_max = 5; //numero maximo de estrelas possiveis
+                                      $num_empty_stars = $star_max - $star_num;
+                                      
+                                      for($i = $star_num; $i > 0; $i -= 1) {
+                                          echo '<span class="glyphicon glyphicon-star"></span>';
+                                      }
+                                      for($i = $num_empty_stars; $i > 0; $i -= 1) {
+                                          echo '<span class="glyphicon glyphicon-star-empty"></span>';
+                                      }
+                                      echo floatval($row['result']) . ' stars';
+                                      break;
                                   }
-                                  for($i = $num_empty_stars; $i > 0; $i -= 1) {
-                                      echo '<span class="glyphicon glyphicon-star-empty"></span>';
-                                  }
-                                  echo floatval($result[0]['result']) . ' stars';
                              ?>
                         </p>
                     </div>
