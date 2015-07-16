@@ -93,10 +93,11 @@
                 <div class="thumbnail">
                     <img class="img-responsive" src="http://placehold.it/800x300" alt="">
                     <div class="caption-full">
-                        <?php
-                            echo '<h4>' . $_GET['t'] .'</h4>';
-                            
-                            $file = fopen($_GET['a'] . '_' .$_GET['t'] . '.txt', "r") or die("author and/or text not found!");
+                        <?php                  
+                            $file = fopen($_GET['a'] . '_' .$_GET['t'] . '.txt', "r");
+                            if (!file)
+                                die("author and/or text not found!");
+                            echo '<h4>' . $_GET['t'] .' by '. $_GET['a'] .'</h4>';
                             echo fread($file,filesize($_GET['a'] . '_' .$_GET['t'] . '.txt'));
                             fclose($file);
                         ?>
