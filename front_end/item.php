@@ -95,7 +95,7 @@
                     <div class="caption-full">
                         <?php                  
                             $file = fopen($_GET['a'] . '_' .$_GET['t'] . '.txt', "r");
-                            if (!file)
+                            if (!$file)
                                 die("author and/or text not found!");
                             echo '<h4>' . $_GET['t'] .' by '. $_GET['a'] .'</h4>';
                             echo fread($file,filesize($_GET['a'] . '_' .$_GET['t'] . '.txt'));
@@ -133,7 +133,7 @@
                         	       $result = $connection->query($sql);
                                 
                                   foreach($result as $row) {
-                                      $star_num = intval($row['result']);
+                                      $star_num = intval($row['ranking']);
                                       if($star_num > 5)
                                             $star_num = 5;
                                       elseif ($star_num < 0)
@@ -148,7 +148,7 @@
                                       for($i = $num_empty_stars; $i > 0; $i -= 1) {
                                           echo '<span class="glyphicon glyphicon-star-empty"></span>';
                                       }
-                                      echo floatval($row['result']) . ' stars';
+                                      echo floatval($row['ranking']) . ' stars';
                                       break;
                                   }
                              ?>
