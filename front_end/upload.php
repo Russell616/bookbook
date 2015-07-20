@@ -59,13 +59,13 @@
     
     <div class="col-md-9">
         <div class="caption-full">
-            <form action= "index.php" method="post" target="_blank" class="btn btn-success">
+            <form action= "index.php" method="post" target="_blank" >
                 <p>Titulo:</p> <input type="text" name="titulo" style="width: 300px;" required/>
                 <p>Texto:</p> <input type="text" name="texto" class="wideInput" placeholder="O seu texto aqui :)" required/>
                 <p>Nome do escritor: </p><input type="text" name="autor" style="width: 300px;" required/></p>
             </form>
         </div>
-        <p><input type="submit" value="Publicar!"/></p>
+        <p><input type="submit" value="Publicar!" class="btn btn-success"/></p>
     </div>
     
 </body>
