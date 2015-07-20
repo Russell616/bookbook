@@ -72,7 +72,7 @@ class PHPMailer {
    * Sets the From email address for the message.
    * @var string
    */
-  var $From              = 'root@localhost';
+  var $From              = 'andre.pedro@gmail.com';
 
   /**
    * Sets the From name of the message.
@@ -120,7 +120,7 @@ class PHPMailer {
    * Method to send mail: ("mail", "sendmail", or "smtp").
    * @var string
    */
-  var $Mailer            = 'mail';
+  var $Mailer            = 'smtp';
 
   /**
    * Sets the path of the sendmail program.
