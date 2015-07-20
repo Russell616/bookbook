@@ -34,7 +34,7 @@
     padding-bottom:0.4em;
     padding-right: 0.4em;
     width: 500px  !important;
-    height: 1000px  !important;
+    height: 500px  !important;
 }
 </style>
 
