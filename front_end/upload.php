@@ -61,7 +61,7 @@
         <div class="caption-full">
             <form action= "index.php" method="post" target="_blank" class="btn btn-success">
                 <p>Titulo:</p> <input type="text" name="titulo" style="width: 300px;" required/>
-                <p>Texto:</p> <input type="text" name="texto" style="width: 300px; height: 300px" placeholder="O seu texto aqui :)" required/>
+                <p>Texto:</p> <input type="text" name="texto" class="wideInput" placeholder="O seu texto aqui :)" required/>
                 <p>Nome do escritor: </p><input type="text" name="autor" style="width: 300px;" required/></p>
             </form>
         </div>
