@@ -63,7 +63,7 @@
                 <div class="caption-full">
                     <form action= "index.php" method="post" target="_blank" >
                         <p>Titulo:</p> <input type="text" name="titulo" style="width: 300px;" required/>
-                        <p>Texto:</p> <textarea type="text" name="texto" class="wideInput" placeholder="O seu texto aqui :)" required></textarea>
+                        <p>Texto:</p> <textarea type="text" name="texto" class="wideInput" required></textarea>
                         <p>Nome do escritor: </p><input type="text" name="autor" style="width: 300px;" required/></p>
                     </form>
                 </div>
