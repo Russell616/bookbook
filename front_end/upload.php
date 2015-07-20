@@ -12,10 +12,10 @@
     <title>Book Book</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="../css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="../../css/bootstrap.min.css" rel="stylesheet" type="text/css">
 
     <!-- Custom CSS -->
-    <link href="../css/shop-homepage.css" rel="stylesheet" type="text/css">
+    <link href="../../css/shop-homepage.css" rel="stylesheet" type="text/css">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -61,7 +61,7 @@
         <div class="caption-full">
             <form action= "index.php" method="post" target="_blank" class="btn btn-success">
                 <p>Titulo:</p> <input type="text" name="titulo" style="width: 300px;" required/>
-                <p>Texto:</p> <input type="text" name="texto" style="width: 300px; height: 300px" required/>
+                <p>Texto:</p> <input type="text" name="texto" style="width: 300px; height: 300px" placeholder="O seu texto aqui :)" required/>
                 <p>Nome do escritor: </p><input type="text" name="autor" style="width: 300px;" required/></p>
             </form>
         </div>
