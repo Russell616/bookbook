@@ -26,18 +26,6 @@
 
 </head>
 
-<style>
-    textarea.wideInput{
-    text-align: left;
-    padding-left:0;
-    padding-top:0;
-    padding-bottom:0.4em;
-    padding-right: 0.4em;
-    width: 500px  !important;
-    height: 500px  !important;
-}
-</style>
-
 <body>
     <!-- Navigation -->
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -60,6 +48,9 @@
                     </li>
                     <li>
                         <a href="#">Contact</a>
+                    </li>
+                    <li>
+                        <a href="upload.php">Upload Texto</a> <!--TODO: METER LINK VÁLIDO -->
                     </li>
                 </ul>
             </div>
