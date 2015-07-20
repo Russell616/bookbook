@@ -65,9 +65,9 @@
                         <p>Titulo:</p> <input type="text" name="titulo" style="width: 300px;" required/>
                         <p>Texto:</p> <textarea type="text" name="texto" class="wideInput" required></textarea>
                         <p>Nome do escritor: </p><input type="text" name="autor" style="width: 300px;" required/></p>
+                        <p><input type="submit" value="Publicar!" class="btn btn-success"/></p>
                     </form>
                 </div>
-                <p><input type="submit" value="Publicar!" class="btn btn-success"/></p>
             </div>
         </div>
     </div>
