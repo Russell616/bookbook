@@ -26,6 +26,18 @@
 
 </head>
 
+<style>
+    textarea.wideInput{
+    text-align: left;
+    padding-left:0;
+    padding-top:0;
+    padding-bottom:0.4em;
+    padding-right: 0.4em;
+    width: 500px  !important;
+    height: 1000px  !important;
+}
+</style>
+
 <body>
     <!-- Navigation -->
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
