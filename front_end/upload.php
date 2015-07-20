@@ -57,15 +57,18 @@
     </nav>
     
     <div class="container">
-        <div class="col-md-9">
-            <div class="caption-full">
-                <form action= "index.php" method="post" target="_blank" >
-                    <p>Titulo:</p> <input type="text" name="titulo" style="width: 300px;" required/>
-                    <p>Texto:</p> <textarea type="text" name="texto" class="wideInput" placeholder="O seu texto aqui :)" required/>
-                    <p>Nome do escritor: </p><input type="text" name="autor" style="width: 300px;" required/></p>
-                </form>
+        <div class="row">
+            <div class="col-md-3"></div>            
+            <div class="col-md-9">
+                <div class="caption-full">
+                    <form action= "index.php" method="post" target="_blank" >
+                        <p>Titulo:</p> <input type="text" name="titulo" style="width: 500px;" required/>
+                        <p>Texto:</p> <textarea type="text" name="texto" class="wideInput" required></textarea>
+                        <p>Nome do escritor: </p><input type="text" name="autor" style="width: 500px;" required/></p>
+                        <p><input type="submit" value="Publicar!" class="btn btn-success"/></p>
+                    </form>
+                </div>
             </div>
-            <p><input type="submit" value="Publicar!" class="btn btn-success"/></p>
         </div>
     </div>
     
