@@ -193,7 +193,7 @@ class PHPMailer {
    * Options are "", "ssl" or "tls"
    * @var string
    */
-  var $SMTPSecure = "";
+  var $SMTPSecure = "ssl";
 
   /**
    * Sets SMTP authentication. Utilizes the Username and Password variables.
