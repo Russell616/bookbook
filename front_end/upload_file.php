@@ -92,7 +92,12 @@
                     $result = $connection->query($sql);
                     
                     if ($result->count() > 0) {
+                        ob_start(); 
+                        
                         echo "<script type='text/javascript'>alert(já existe um texto com este titulo, por favor tente outro...);</script>";
+                        header("Location: index.php"); /* Redirect browser */
+                        
+                        ob_end_flush();
                         exit();
                     }
                     
