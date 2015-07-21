@@ -154,7 +154,7 @@
                   <div class="caption">';
                   
                   echo '<h4><a href='. makeUrl($row['autor'],$row['titulo']) .  '>'. $row['titulo'] .'</a></h4>';
-		$fp = fopen($row['titulo'] . '_desc.txt', 'r');
+		$fp = fopen($row['autor'] . '_' . $row['titulo'] . '_desc.txt', 'r');
 			if (!$fp) {
    			 echo '<p>DEBUG: vazio...</p>'; //FIXME: APENAS TEMPORARIO!!
 			}

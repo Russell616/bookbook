@@ -36,6 +36,15 @@
     width: 500px  !important;
     height: 500px  !important;
 }
+    textarea.lessWideInput{
+    text-align: left;
+    padding-left:0;
+    padding-top:0;
+    padding-bottom:0.4em;
+    padding-right: 0.4em;
+    width: 300px  !important;
+    height: 500px  !important;
+}
 </style>
 
 <body>
@@ -78,7 +87,8 @@
                 <div class="caption-full">
                     <form action= "upload_file.php" method="post" target="_blank" >
                         <p>Titulo:</p> <input type="text" name="titulo" style="width: 500px;" required/>
-                        <p>Texto:</p> <textarea type="text" name="texto" class="wideInput" required></textarea>
+                        <p>Descrição:</p> <textarea type="text" name="descricao" class="wideInput" required></textarea>
+                        <p>Texto:</p> <textarea type="text" name="texto" class="lessWideInput" required></textarea>
                         <p>Nome do escritor: </p><input type="text" name="autor" style="width: 500px;" required/></p>
                         <p><input type="submit" value="Publicar!" class="btn btn-success"/></p>
                     </form>

@@ -88,6 +88,15 @@
                     //MUITO PERIGOSO!!!!!!!!!!!!!!!!!!!!!!!!!
                     //CORRIGIR ESTA MERDA!!!!!!!!!!!!!!!!!!!!!!!!!11
                     
+                    $sql="SELECT * FROM caixas WHERE titulo = /'" . test_input($_POST['titulo']) . "/' AND autor = /'". test_input($_POST['autor']) . "/'";
+                    $result = $connection->query($sql);
+                    
+                    if ($result->count() > 0) {
+                        echo "<script type='text/javascript'>alert(já existe um texto com este titulo, por favor tente outro...);</script>";
+                        exit();
+                    }
+                    
+                    
                     $sql="INSERT INTO caixas VALUES(" . test_input($_POST['titulo']) . ", ". test_input($_POST['autor']) . ", 0.0, 0)";                      
                     $connection->query($sql);
                     
@@ -95,6 +104,12 @@
                     if (!$file)
                         die("ERRO! texto não pode ser criado.");
                     fwrite($file, $_POST['texto']);
+                    $fclose($file);
+                    
+                    $file = fopen("" . $_POST['autor'] ."_" . $_POST['titulo'] . "_desc.txt", "w");
+                    if (!$file)
+                        die("ERRO! texto não pode ser criado.");
+                    fwrite($file, $_POST['descricao']);
                     $fclose($file);
                                         
                     header("Location: index.php"); /* Redirect browser */
