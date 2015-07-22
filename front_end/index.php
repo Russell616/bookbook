@@ -128,7 +128,9 @@
                 <div class="row">
 		<?php
 			function makeUrl($a, $t) {
-                return 'item.php/?a='.$a.'&t='.$t;
+                $_POST['a'] = $a;
+                $_POST['t'] = $t;
+                return 'item.php';
             }
 
 			$host="localhost"; // o MySQL esta disponivel nesta maquina

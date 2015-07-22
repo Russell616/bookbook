@@ -97,11 +97,11 @@
                     <img class="img-responsive" src="http://placehold.it/800x300" alt="">
                     <div class="caption-full">
                         <?php                  
-                            $file = fopen($_GET['a'] . '_' .$_GET['t'] . '.txt', "r");
+                            $file = fopen($_POST['a'] . '_' .$_POST['t'] . '.txt', "r");
                             if (!$file)
                                 die("author and/or text not found!");
-                            echo '<h4>' . $_GET['t'] .' by '. $_GET['a'] .'</h4>';
-                            echo fread($file,filesize($_GET['a'] . '_' .$_GET['t'] . '.txt'));
+                            echo '<h4>' . $_POST['t'] .' by '. $_POST['a'] .'</h4>';
+                            echo fread($file,filesize($_POST['a'] . '_' .$_POST['t'] . '.txt'));
                             fclose($file);
                         ?>
                     </div>
@@ -132,7 +132,7 @@
                         				$data = htmlspecialchars($data);
                         				return $data;
                         			}
-                        		   $sql="SELECT ranking FROM caixas WHERE titulo = \"" . test_input($_GET['t']) . "\" and autor = \"" . test_input($_GET['a']) . "\"";
+                        		   $sql="SELECT ranking FROM caixas WHERE titulo = \"" . test_input($_POST['t']) . "\" and autor = \"" . test_input($_POST['a']) . "\"";
                         	       $result = $connection->query($sql);
                                 
                                   foreach($result as $row) {
