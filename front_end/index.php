@@ -176,7 +176,7 @@
                   <img src="http://placehold.it/320x150" alt="">
                   <div class="caption">';
                   
-                  echo '"post("index.php", {t: '. $row['titulo'] .', a: ' . $row['autor'] . '})"'; //DEBUG
+                  echo '"post("index.php", {t: "'. $row['titulo'] .'", a: "' . $row['autor'] . '"})"'; //DEBUG
                   echo '<h4><a onclick="post("index.php", {t: '. $row['titulo'] .', a: ' . $row['autor'] . '})" href=item.php >'. $row['titulo'] .'</a></h4>';
 		    $fp = fopen($row['autor'] . '_' . $row['titulo'] . '_desc.txt', 'r');
 			if (!$fp) {
