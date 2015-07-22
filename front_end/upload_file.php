@@ -96,6 +96,7 @@
                         
                         echo "<script type='text/javascript'>alert(já existe um texto com este titulo, por favor tente outro...);</script>";
                         header("Location: index.php"); /* Redirect browser */
+                        echo "<script>window.close();</script>";
                         
                         ob_end_flush();
                         exit();
@@ -118,6 +119,7 @@
                     fclose($file);
                                         
                     header("Location: index.php"); /* Redirect browser */
+                    echo "<script>window.close();</script>";
                     exit();
 			?>
 			
