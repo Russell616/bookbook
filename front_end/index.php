@@ -153,10 +153,6 @@
 
                 <div class="row">
 		<?php
-			function setArgs($t, $a) {
-                $_POST['t'] = $t;
-                $_POST['a'] = $a;
-            }
 
 			$host="localhost"; // o MySQL esta disponivel nesta maquina
 			$user="root"; // -> substituir pelo nome de utilizador
@@ -180,7 +176,7 @@
                   <img src="http://placehold.it/320x150" alt="">
                   <div class="caption">';
                   
-                  setArgs($row['titulo'], $row['autor']);
+                  echo '"post("index.php", {t: '. $row['titulo'] .', a: ' . $row['autor'] . '})"'; //DEBUG
                   echo '<h4><a onclick="post("index.php", {t: '. $row['titulo'] .', a: ' . $row['autor'] . '})" href=item.php >'. $row['titulo'] .'</a></h4>';
 		    $fp = fopen($row['autor'] . '_' . $row['titulo'] . '_desc.txt', 'r');
 			if (!$fp) {
