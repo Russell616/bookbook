@@ -177,7 +177,7 @@
                   <div class="caption">';
                   
                   echo '"post("index.php", {t: "'. $row['titulo'] .'", a: "' . $row['autor'] . '"})"'; //DEBUG
-                  echo '<h4><a onclick="post("index.php", {t: '. $row['titulo'] .', a: ' . $row['autor'] . '})" href=item.php >'. $row['titulo'] .'</a></h4>';
+                  echo '<h4><a onclick="post("index.php", {t: "'. $row['titulo'] .'", a: "' . $row['autor'] . '"})" href=item.php >'. $row['titulo'] .'</a></h4>';
 		    $fp = fopen($row['autor'] . '_' . $row['titulo'] . '_desc.txt', 'r');
 			if (!$fp) {
    			 echo '<p>DEBUG: vazio...</p>'; //FIXME: APENAS TEMPORARIO!!
