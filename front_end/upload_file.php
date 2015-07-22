@@ -102,21 +102,20 @@
                     }
                     
                     
-                    $sql="INSERT INTO caixas VALUES('" . test_input($_POST['titulo']) . "', '". test_input($_POST['autor']) . "', 0.0, 0)";
-                    echo $sql;                      
+                    $sql="INSERT INTO caixas VALUES('" . test_input($_POST['titulo']) . "', '". test_input($_POST['autor']) . "', 0.0, 0)";                   
                     $connection->query($sql);
                     
                     $file = fopen("" . $_POST['autor'] ."_" . $_POST['titulo'] . ".txt", "w");
                     if (!$file)
                         die("ERRO! texto não pode ser criado.");
                     fwrite($file, $_POST['texto']);
-                    $fclose($file);
+                    fclose($file);
                     
                     $file = fopen("" . $_POST['autor'] ."_" . $_POST['titulo'] . "_desc.txt", "w");
                     if (!$file)
                         die("ERRO! texto não pode ser criado.");
                     fwrite($file, $_POST['descricao']);
-                    $fclose($file);
+                    fclose($file);
                                         
                     header("Location: index.php"); /* Redirect browser */
                     exit();
