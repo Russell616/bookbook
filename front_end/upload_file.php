@@ -88,7 +88,7 @@
                     //MUITO PERIGOSO!!!!!!!!!!!!!!!!!!!!!!!!!
                     //CORRIGIR ESTA MERDA!!!!!!!!!!!!!!!!!!!!!!!!!11
                     
-                    $sql="SELECT * FROM caixas WHERE titulo = /'" . test_input($_POST['titulo']) . "/' AND autor = /'". test_input($_POST['autor']) . "/'";
+                    $sql="SELECT * FROM caixas WHERE titulo = '" . test_input($_POST['titulo']) . "' AND autor = '". test_input($_POST['autor']) . "'";
                     $result = $connection->query($sql);
                     
                     if ($result->count() > 0) {
