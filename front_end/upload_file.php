@@ -91,7 +91,7 @@
                     $sql="SELECT * FROM caixas WHERE titulo = '" . test_input($_POST['titulo']) . "' AND autor = '". test_input($_POST['autor']) . "'";
                     $result = $connection->query($sql);
                     
-                    if ($result->count() > 0) {
+                    if ($result->rowCount() > 0) {
                         ob_start(); 
                         
                         echo "<script type='text/javascript'>alert(já existe um texto com este titulo, por favor tente outro...);</script>";
