@@ -127,10 +127,9 @@
 
                 <div class="row">
 		<?php
-			function makeUrl($a, $t) {
+			function setArgs($t, $a) {
                 $_POST['a'] = $a;
                 $_POST['t'] = $t;
-                return 'item.php';
             }
 
 			$host="localhost"; // o MySQL esta disponivel nesta maquina
@@ -155,7 +154,7 @@
                   <img src="http://placehold.it/320x150" alt="">
                   <div class="caption">';
                   
-                  echo '<h4><a href='. makeUrl($row['autor'],$row['titulo']) .  '>'. $row['titulo'] .'</a></h4>';
+                  echo '<h4><a onclick="setArgs('.  $row['titulo'] .','. $row['autor'] .')"  href='. item.php .  '>'. $row['titulo'] .'</a></h4>';
 		$fp = fopen($row['autor'] . '_' . $row['titulo'] . '_desc.txt', 'r');
 			if (!$fp) {
    			 echo '<p>DEBUG: vazio...</p>'; //FIXME: APENAS TEMPORARIO!!
