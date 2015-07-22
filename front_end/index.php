@@ -28,32 +28,7 @@
 </head>
 
 <body>
-    <script>
-        function post(path, params, method) {
-            method = method || "post"; // Set method to post by default if not specified.
-        
-            // The rest of this code assumes you are not using a library.
-            // It can be made less wordy if you use one.
-            var form = document.createElement("form");
-            form.setAttribute("method", method);
-            form.setAttribute("action", path);
-        
-            alert(params['t'].'_'.params['a']); //DEBUG
-            for(var key in params) {
-                if(params.hasOwnProperty(key)) {
-                    var hiddenField = document.createElement("input");
-                    hiddenField.setAttribute("type", "hidden");
-                    hiddenField.setAttribute("name", key);
-                    hiddenField.setAttribute("value", params[key]);
-        
-                    form.appendChild(hiddenField);
-                 }
-            }
-        
-            document.body.appendChild(form);
-            form.submit();
-        }
-    </script>
+
 
     <!-- Navigation -->
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -176,7 +151,6 @@
                   <img src="http://placehold.it/320x150" alt="">
                   <div class="caption">';
                   
-                  echo '"post("index.php", {t: "'. $row['titulo'] .'", a: "' . $row['autor'] . '"})"'; //DEBUG
                   echo '<h4><a onclick="post("index.php", {t: "'. $row['titulo'] .'", a: "' . $row['autor'] . '"})" href=item.php >'. $row['titulo'] .'</a></h4>';
 		    $fp = fopen($row['autor'] . '_' . $row['titulo'] . '_desc.txt', 'r');
 			if (!$fp) {
@@ -220,6 +194,33 @@
             }
 
 		?>
+        <script>
+        function post(path, params, method) {
+            method = method || "post"; // Set method to post by default if not specified.
+        
+            // The rest of this code assumes you are not using a library.
+            // It can be made less wordy if you use one.
+            var form = document.createElement("form");
+            form.setAttribute("method", method);
+            form.setAttribute("action", path);
+        
+            
+            alert(params['t'].'_'.params['a']); //DEBUG
+            for(var key in params) {
+                if(params.hasOwnProperty(key)) {
+                    var hiddenField = document.createElement("input");
+                    hiddenField.setAttribute("type", "hidden");
+                    hiddenField.setAttribute("name", key);
+                    hiddenField.setAttribute("value", params[key]);
+        
+                    form.appendChild(hiddenField);
+                 }
+            }
+        
+            document.body.appendChild(form);
+            form.submit();
+        }
+        </script>
 
 
                 </div>
