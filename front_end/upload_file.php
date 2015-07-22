@@ -102,7 +102,8 @@
                     }
                     
                     
-                    $sql="INSERT INTO caixas VALUES(" . test_input($_POST['titulo']) . ", ". test_input($_POST['autor']) . ", 0.0, 0)";                      
+                    $sql="INSERT INTO caixas VALUES('" . test_input($_POST['titulo']) . "', '". test_input($_POST['autor']) . "', 0.0, 0)";
+                    echo $sql;                      
                     $connection->query($sql);
                     
                     $file = fopen("" . $_POST['autor'] ."_" . $_POST['titulo'] . ".txt", "w");
