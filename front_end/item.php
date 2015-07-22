@@ -95,7 +95,9 @@
                 <div class="thumbnail">
                     <img class="img-responsive" src="http://placehold.it/800x300" alt="">
                     <div class="caption-full">
-                        <?php                  
+                        <?php
+                            echo $_POST['a'];
+                            echo $_POST['t'];                   
                             $file = fopen($_POST['a'] . '_' .$_POST['t'] . '.txt', "r");
                             if (!$file)
                                 die("author and/or text not found!");
