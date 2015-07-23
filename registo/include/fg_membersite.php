@@ -469,7 +469,7 @@ class FGMembersite
         "Welcome! Your registration  with ".$this->sitename." is completed.\r\n".
         "\r\n".
         "Regards,\r\n".
-        "Webmaster\r\n".
+        ":3\r\n".
         $this->sitename;
 
         if(!$mailer->Send())
@@ -535,7 +535,7 @@ class FGMembersite
         "There was a request to reset your password at ".$this->sitename."\r\n".
         "Please click the link below to complete the request: \r\n".$link."\r\n".
         "Regards,\r\n".
-        "Webmaster\r\n".
+        ":3\r\n".
         $this->sitename;
         
         if(!$mailer->Send())
@@ -568,7 +568,7 @@ class FGMembersite
         "Login here: ".$this->GetAbsoluteURLFolder()."/login.php\r\n".
         "\r\n".
         "Regards,\r\n".
-        "Webmaster\r\n".
+        ":3\r\n".
         $this->sitename;
         
         if(!$mailer->Send())
@@ -640,7 +640,7 @@ class FGMembersite
         "$confirm_url\r\n".
         "\r\n".
         "Regards,\r\n".
-        "Webmaster\r\n".
+        ":3\r\n".
         $this->sitename;
 
         if(!$mailer->Send())
