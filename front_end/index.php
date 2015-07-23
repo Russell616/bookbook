@@ -151,7 +151,7 @@
                   <img src="http://placehold.it/320x150" alt="">
                   <div class="caption">';
                   
-                  echo '<h4><a onclick="post("index.php", {t: "'. $row['titulo'] .'", a: "' . $row['autor'] . '"})" href=item.php >'. $row['titulo'] .'</a></h4>';
+                  echo '<h4><a onclick="return teste()" href=item.php >'. $row['titulo'] .'</a></h4>';
 		    $fp = fopen($row['autor'] . '_' . $row['titulo'] . '_desc.txt', 'r');
 			if (!$fp) {
    			 echo '<p>DEBUG: vazio...</p>'; //FIXME: APENAS TEMPORARIO!!
@@ -195,6 +195,11 @@
 
 		?>
         <script>
+        function teste() {
+            alert("ola");
+        }
+            
+            
         function post(path, params, method) {
             method = method || "post"; // Set method to post by default if not specified.
         
