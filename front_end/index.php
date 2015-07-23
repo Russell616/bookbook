@@ -53,7 +53,7 @@
                         <a href="#">Contact</a> <!--TODO: METER LINK VÁLIDO -->
                     </li>
                     <li>
-                        <a href="upload.php">Upload Texto</a>
+                        <a href="upload.php">Upload Text</a>
                     </li>
                 </ul>
             </div>
