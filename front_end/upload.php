@@ -42,8 +42,8 @@
     padding-top:0;
     padding-bottom:0.4em;
     padding-right: 0.4em;
-    width: 500px  !important;
-    height: 100px  !important;
+    width: 300px  !important;
+    height: 300px  !important;
 }
 </style>
 
