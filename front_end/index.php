@@ -129,7 +129,7 @@
                 <div class="row">
                     <script>            
                         function post(path, t, a) {
-                       /*     method = "post"; // Set method to post.
+                            method = "post"; // Set method to post.
                         
                             // The rest of this code assumes you are not using a library.
                             // It can be made less wordy if you use one.
@@ -150,8 +150,7 @@
                             form.appendChild(hiddenField);
                 
                             document.body.appendChild(form);
-                            form.submit();*/
-                            alert(t);
+                            form.submit();
                         }
                 </script>
 		<?php
