@@ -129,7 +129,7 @@
                 <div class="row">
                     <script>            
                         function post(path, t, a) {
-                            method = "post"; // Set method to post.
+                       /*     method = "post"; // Set method to post.
                         
                             // The rest of this code assumes you are not using a library.
                             // It can be made less wordy if you use one.
@@ -150,12 +150,13 @@
                             form.appendChild(hiddenField);
                 
                             document.body.appendChild(form);
-                            form.submit();
+                            form.submit();*/
+                            alert(t);
                         }
                 </script>
 		<?php
             function makeFuncCall($t,$a) {
-	           return '<h4><a onclick="post(\"item.php\",\"' . $t . '\",\"'.$a.'\"); return true;" href="#" >'. $t .'</a></h4>';
+	           return '<h4><a onclick="post(\'item.php\',\'' . $t . '\',\''.$a.'\'); return true;" href="#" >'. $t .'</a></h4>';
             }
 			$host="localhost"; // o MySQL esta disponivel nesta maquina
 			$user="root"; // -> substituir pelo nome de utilizador
