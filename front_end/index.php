@@ -137,17 +137,19 @@
                             form.setAttribute("method", method);
                             form.setAttribute("action", path);
                 
-                            var hiddenField = document.createElement("input");
-                            hiddenField.setAttribute("type", "hidden");
-                            hiddenField.setAttribute("name", "t");
-                            hiddenField.setAttribute("value", t);
+                            var hiddenFieldT = document.createElement("input");
+                            hiddenFieldT.setAttribute("type", "hidden");
+                            hiddenFieldT.setAttribute("name", "t");
+                            hiddenFieldT.setAttribute("value", t);
                             
-                            var hiddenField = document.createElement("input");
-                            hiddenField.setAttribute("type", "hidden");
-                            hiddenField.setAttribute("name", "a");
-                            hiddenField.setAttribute("value", a);
+                            form.appendChild(hiddenFieldT);
+                            
+                            var hiddenFieldA = document.createElement("input");
+                            hiddenFieldA.setAttribute("type", "hidden");
+                            hiddenFieldA.setAttribute("name", "a");
+                            hiddenFieldA.setAttribute("value", a);
                         
-                            form.appendChild(hiddenField);
+                            form.appendChild(hiddenFieldA);
                 
                             document.body.appendChild(form);
                             form.submit();
