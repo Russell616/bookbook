@@ -4,10 +4,10 @@ require_once("./include/fg_membersite.php");
 $fgmembersite = new FGMembersite();
 
 //Provide your site name here
-$fgmembersite->SetWebsiteName('localhost');
+$fgmembersite->SetWebsiteName('Book Book');
 
 //Provide the email address where you want to get notifications
-$fgmembersite->SetAdminEmail('andre.pedrocv@gmail.com');
+$fgmembersite->SetAdminEmail('lxbookbook2015@gmail.com');
 
 //Provide your database login details here:
 //hostname, user name, password, database name and table name
