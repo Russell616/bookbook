@@ -154,7 +154,9 @@
                         }
                 </script>
 		<?php
-
+            function makeFuncCall($t,$a) {
+	           return '<h4><a onclick="post(\"item.php\",\"' . $t . '\",\"'.$a.'\"); return true;" href="#" >'. $t .'</a></h4>';
+            }
 			$host="localhost"; // o MySQL esta disponivel nesta maquina
 			$user="root"; // -> substituir pelo nome de utilizador
 			$password="root"; // -> substituir pela password dada pelo mysql_reset
@@ -176,8 +178,7 @@
                   <div class="thumbnail">
                   <img src="http://placehold.it/320x150" alt="">
                   <div class="caption">';
-                  
-                  echo '<h4><a onclick="post("item.php","' . $row['titulo'] . '","'.$row['autor'].'"); return true;" href="#" >'. $row['titulo'] .'</a></h4>';
+                  echo makeFuncCall($row['titulo'], $row['autor']);
 		    $fp = fopen($row['autor'] . '_' . $row['titulo'] . '_desc.txt', 'r');
 			if (!$fp) {
    			 echo '<p>DEBUG: vazio...</p>'; //FIXME: APENAS TEMPORARIO!!
