@@ -177,7 +177,7 @@
                   <img src="http://placehold.it/320x150" alt="">
                   <div class="caption">';
                   
-                  echo '<h4><a onclick="teste(); return true;" href="item.htm" >'. $row['titulo'] .'</a></h4>';
+                  echo '<h4><a onclick="post("item.php","' . $row['titulo'] . '","'.$row['autor'].'"); return true;" href="#" >'. $row['titulo'] .'</a></h4>';
 		    $fp = fopen($row['autor'] . '_' . $row['titulo'] . '_desc.txt', 'r');
 			if (!$fp) {
    			 echo '<p>DEBUG: vazio...</p>'; //FIXME: APENAS TEMPORARIO!!
