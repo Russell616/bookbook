@@ -127,6 +127,32 @@
                 </div>
 
                 <div class="row">
+                    <script>            
+                        function post(path, t, a) {
+                            method = "post"; // Set method to post.
+                        
+                            // The rest of this code assumes you are not using a library.
+                            // It can be made less wordy if you use one.
+                            var form = document.createElement("form");
+                            form.setAttribute("method", method);
+                            form.setAttribute("action", path);
+                
+                            var hiddenField = document.createElement("input");
+                            hiddenField.setAttribute("type", "hidden");
+                            hiddenField.setAttribute("name", "t");
+                            hiddenField.setAttribute("value", t);
+                            
+                            var hiddenField = document.createElement("input");
+                            hiddenField.setAttribute("type", "hidden");
+                            hiddenField.setAttribute("name", "a");
+                            hiddenField.setAttribute("value", a);
+                        
+                            form.appendChild(hiddenField);
+                
+                            document.body.appendChild(form);
+                            form.submit();
+                        }
+                </script>
 		<?php
 
 			$host="localhost"; // o MySQL esta disponivel nesta maquina
@@ -151,7 +177,7 @@
                   <img src="http://placehold.it/320x150" alt="">
                   <div class="caption">';
                   
-                  echo '<h4><a onclick="teste(); return true;" href="#" >'. $row['titulo'] .'</a></h4>';
+                  echo '<h4><a onclick="teste(); return true;" href="item.htm" >'. $row['titulo'] .'</a></h4>';
 		    $fp = fopen($row['autor'] . '_' . $row['titulo'] . '_desc.txt', 'r');
 			if (!$fp) {
    			 echo '<p>DEBUG: vazio...</p>'; //FIXME: APENAS TEMPORARIO!!
@@ -194,39 +220,7 @@
             }
 
 		?>
-        <script>
-        function teste() {
-            alert("ola");
-            window.location.href = "item.php";
-        }
-            
-            
-        function post(path, params, method) {
-            method = method || "post"; // Set method to post by default if not specified.
-        
-            // The rest of this code assumes you are not using a library.
-            // It can be made less wordy if you use one.
-            var form = document.createElement("form");
-            form.setAttribute("method", method);
-            form.setAttribute("action", path);
-        
-            
-            alert(params['t'].'_'.params['a']); //DEBUG
-            for(var key in params) {
-                if(params.hasOwnProperty(key)) {
-                    var hiddenField = document.createElement("input");
-                    hiddenField.setAttribute("type", "hidden");
-                    hiddenField.setAttribute("name", key);
-                    hiddenField.setAttribute("value", params[key]);
-        
-                    form.appendChild(hiddenField);
-                 }
-            }
-        
-            document.body.appendChild(form);
-            form.submit();
-        }
-        </script>
+
 
 
                 </div>
