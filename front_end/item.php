@@ -175,7 +175,7 @@
                             <span class="glyphicon glyphicon-star-empty"></span>
                             Anonymous
                             <span class="pull-right">10 days ago</span>
-                            <p>This product was great in terms of quality. I would definitely buy another!</p>
+                            <p>This text was great!! Hope to read more from you soon!</p>
                         </div>
                     </div>
 
@@ -190,7 +190,7 @@
                             <span class="glyphicon glyphicon-star-empty"></span>
                             Anonymous
                             <span class="pull-right">12 days ago</span>
-                            <p>I've alredy ordered another one!</p>
+                            <p>Amazing!</p>
                         </div>
                     </div>
 
@@ -205,7 +205,7 @@
                             <span class="glyphicon glyphicon-star-empty"></span>
                             Anonymous
                             <span class="pull-right">15 days ago</span>
-                            <p>I've seen some better than this, but not at this price. I definitely recommend this item.</p>
+                            <p>Great book! Keep going!</p>
                         </div>
                     </div>
 
