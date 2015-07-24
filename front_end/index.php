@@ -68,7 +68,7 @@
         <div class="row">
 
             <div class="col-md-3">
-                <p class="lead">Shop Name</p>
+                <p class="lead">Categorias</p>
                 <div class="list-group">
                     <?php
         			$host="localhost"; // o MySQL esta disponivel nesta maquina
@@ -84,7 +84,7 @@
         			    die('Could not connect: ' . mysqli_error($con));
         			}
         
-        			$sql="SELECT nome FROM tags";
+        			$sql="SELECT nome FROM tags ORDER BY nome";
         			$result = $connection->query($sql);
                     foreach($result as $row) {
                         echo '<a href="#" class="list-group-item">' . $row['nome'] . ' </a>'; //TODO: METER LINK VÁLIDO
