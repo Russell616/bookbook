@@ -47,10 +47,10 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li>
-                        <a href="#">About</a> <!--TODO: METER LINK VÁLIDO -->
+                        <a href="about.php">About</a> <!--TODO: METER LINK VÁLIDO -->
                     </li>
                     <li>
-                        <a href="#">Contact</a> <!--TODO: METER LINK VÁLIDO -->
+                        <a href="contact.php">Contact</a> <!--TODO: METER LINK VÁLIDO -->
                     </li>
                     <li>
                         <a href="upload.php">Upload Text</a>
