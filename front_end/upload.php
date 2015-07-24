@@ -33,7 +33,7 @@
     padding-top:0;
     padding-bottom:0.4em;
     padding-right: 0.4em;
-    width: 500px  !important;
+    width: 550px  !important;
     height: 150px  !important;
 }
     textarea.lessWideInput{
@@ -42,12 +42,9 @@
     padding-top:0;
     padding-bottom:0.4em;
     padding-right: 0.4em;
-    width: 500px  !important;
+    width: 550px  !important;
     height: 350px  !important;
-}
-    .direita{
-    	right: 5px;
-    }        
+}      
         
 </style>
 
