@@ -34,7 +34,7 @@
     padding-bottom:0.4em;
     padding-right: 0.4em;
     width: 500px  !important;
-    height: 350px  !important;
+    height: 150px  !important;
 }
     textarea.lessWideInput{
     text-align: left;
@@ -43,7 +43,7 @@
     padding-bottom:0.4em;
     padding-right: 0.4em;
     width: 500px  !important;
-    height: 150px  !important;
+    height: 350px  !important;
 }
     direita{
     	right: 5px;
