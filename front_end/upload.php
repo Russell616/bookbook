@@ -45,6 +45,10 @@
     width: 300px  !important;
     height: 300px  !important;
 }
+    direita{
+    	right: 5px;
+    }        
+        
 </style>
 
 <body>
@@ -90,7 +94,7 @@
                         <p>Description:</p> <textarea type="text" name="descricao" class="wideInput" required></textarea>
                         <p>Text:</p> <textarea type="text" name="texto" class="lessWideInput" required></textarea>
                         <p>Name of the writer: </p><input type="text" name="autor" style="width: 500px;" required/></p>
-                        <p><input type="submit" value="Publish!" class="btn btn-success"/></p>
+                        <p><input type="submit" value="Publish!" class="btn btn-success direita"/></p>
                     </form>
                 </div>
             </div>
