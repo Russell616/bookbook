@@ -94,7 +94,7 @@
                         <p>Description:</p> <textarea type="text" name="descricao" class="wideInput" required></textarea>
                         <p>Text:</p> <textarea type="text" name="texto" class="lessWideInput" required></textarea>
                         <p>Name of the writer: </p><input type="text" name="autor" style="width: 500px;" required/></p>
-                        <p><input type="submit" value="Publish!" class="btn btn-success text-right"/></p>
+                        <p><input type="submit" value="Publish!" class="btn btn-success right-block"/></p>
                     </form>
                 </div>
             </div>
