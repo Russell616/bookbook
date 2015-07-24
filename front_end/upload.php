@@ -45,7 +45,7 @@
     width: 500px  !important;
     height: 350px  !important;
 }
-    direita{
+    .direita{
     	right: 5px;
     }        
         
