@@ -85,16 +85,12 @@
 </nav>
 <div class="col-md-3">
 <address>
-    <strong><h4>Contact us!</h4></strong><br>
+    <strong><h4>About us</h4></strong><br>
     <p></p>
-    <strong>Book Book</strong><br>
-    LxReactor<br>
+    <strong></strong><br>
+    We are a group of computer science students that started this project on LxReactor2015<br>
 </address>
 
-<address>
-    <strong>Hugo Braz e Andre Pedro</strong><br>
-    <a href="mailto:#">lxbookbook2015@gmail.com</a>
-</address>
 </div>
 
 
