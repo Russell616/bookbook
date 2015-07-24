@@ -87,10 +87,10 @@
             <div class="col-md-6">
                 <div class="caption-full">
                     <form action= "upload_file.php" method="post" >
-                        <p>Title:</p> <input type="text" name="titulo" style="width: 500px;" required/>
+                        <p>Title:</p> <input type="text" name="titulo" style="width: 550px;" required/>
                         <p>Description:</p> <textarea type="text" name="descricao" class="wideInput" required></textarea>
                         <p>Text:</p> <textarea type="text" name="texto" class="lessWideInput" required></textarea>
-                        <p>Name of the writer: </p><input type="text" name="autor" style="width: 500px;" required/></p>
+                        <p>Name of the writer: </p><input type="text" name="autor" style="width: 550px;" required/></p>
                         <p class="text-right"><input type="submit" value="Publish!" class="btn btn-success"/></p>
                     </form>
                 </div>
